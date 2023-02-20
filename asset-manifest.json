@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/garden/static/css/main.d3f85cbd.css",
+    "main.js": "/garden/static/js/main.d4545bb1.js",
+    "index.html": "/garden/index.html",
+    "main.d3f85cbd.css.map": "/garden/static/css/main.d3f85cbd.css.map",
+    "main.d4545bb1.js.map": "/garden/static/js/main.d4545bb1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3f85cbd.css",
+    "static/js/main.d4545bb1.js"
+  ]
+}
