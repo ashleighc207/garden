@@ -1,19 +1,18 @@
 import "./App.css";
 import { Category } from "./components";
-import { data } from "./data";
+import { data, Category as CategoryType } from "./data";
 import { AppWrapper, MainHeading, StyledHr } from "./styled";
+import { sortAlphabeticallyByObjectKey } from "./helpers";
 
 export const App = () => {
-  const vegetables = data.category?.vegetables || [];
-  const herbs = data.category?.herbs || [];
-  const flowers = data.category?.flowers || [];
   return (
     <AppWrapper>
       <MainHeading>Seed List</MainHeading>
       <StyledHr />
-      <Category title="Vegetables" data={vegetables} />
-      <Category title="Herbs" data={herbs} />
-      <Category title="Flowers" data={flowers} />
+      {data.sort(sortAlphabeticallyByObjectKey).map((data: CategoryType) => {
+        const category = Object.entries(data)[0];
+        return <Category title={category[0]} data={category[1]} />;
+      })}
     </AppWrapper>
   );
 };

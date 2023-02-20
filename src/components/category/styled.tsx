@@ -9,6 +9,7 @@ export const CategoryHeading = styled.h2`
   display: flex;
   justify-content: center;
   font-weight: 600;
+  text-transform: capitalize;
 `;
 
 export const CategorySubheading = styled.h3`

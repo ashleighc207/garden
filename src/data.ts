@@ -1,9 +1,54 @@
-type SeedData = {
-  category: any;
+export type Variety = {
+  [key: string]: Array<string>;
 };
-export const data: SeedData = {
-  category: {
-    vegetables: [""],
+
+export type Category = {
+  [key: string]: Array<Variety>;
+};
+
+export const data: Array<Category> = [
+  {
+    vegetables: [
+      {
+        cucumber: [
+          "green fingers",
+          "bush slicer",
+          "beit alpha",
+          "marketmore 76",
+        ],
+      },
+      { beans: ["cantare", "dragon tongue"] },
+      { "soy bean": ["chiba green"] },
+      { "lima bean": ["henderson's bush"] },
+    ],
+  },
+  {
+    fruits: [
+      { canteloupe: ["sugar cube", "hale's best jumbo"] },
+      {
+        strawberry: [
+          "heirloom pineapple",
+          "white soul",
+          "rainbow treasure",
+          "alexandria",
+        ],
+      },
+      { honeydew: ["bodacious hybrid", "papaya"] },
+      { watermelon: ["crimson sweet", "lemon drop"] },
+      { "ground cherry": ["aunt molly's"] },
+      {
+        melon: [
+          "mango hybrid",
+          "superball hybrid",
+          "rich sweetness 132",
+          "hara madhu",
+        ],
+      },
+      { huckleberry: ["garden"] },
+      { banana: ["pink"] },
+    ],
+  },
+  {
     flowers: [
       {
         impatiens: [
@@ -291,6 +336,6 @@ export const data: SeedData = {
       { celosia: ["kimono formula mixed", "hippie tie dye"] },
       { gazania: ["sunshine mix", "big kiss"] },
     ],
-    herbs: [],
   },
-};
+  { herbs: [] },
+];

@@ -7,19 +7,19 @@ import {
   FlexColumn,
   CategoryCount,
 } from "./styled";
+import { sortAlphabeticallyByObjectKey } from "../../helpers";
 
 type CategoryProps = {
   title: string;
   data: any;
 };
+
 export const Category = ({ title, data }: CategoryProps) => {
   return (
     <CategoryWrapper>
       <CategoryHeading>{title}</CategoryHeading>
       {data
-        ?.sort((a: any, b: any) => {
-          return Object.keys(a)[0].localeCompare(Object.keys(b)[0]);
-        })
+        ?.sort(sortAlphabeticallyByObjectKey)
         ?.map((item: { ["string"]: [] }) => {
           return (
             <>
